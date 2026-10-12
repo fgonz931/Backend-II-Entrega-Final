@@ -1,0 +1,49 @@
+<div class="container">
+
+    <h1>Tienda Online</h1>
+
+    <button class="cart-button" onclick="showCart()">
+        Mostrar carrito
+    </button>
+
+    <div class="products-container">
+
+        {{#each products}}
+
+        <div class="product-card">
+
+            <h3 class="product-title">
+                <a href="/products/{{this._id}}">
+                    {{this.title}}
+                </a>
+            </h3>
+
+            <p class="product-price">
+                ${{this.price}}
+            </p>
+
+            <button class="add-button" onclick="addToCart('{{this._id}}')">
+                Agregar al carrito
+            </button>
+
+        </div>
+
+        {{/each}}
+
+    </div>
+
+    <div class="pagination">
+        {{#each links}}
+        <a href={{this.link}}>{{this.text}}</a>
+        {{/each}}
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="/css/styles.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+<script src="/js/cart.js"></script>

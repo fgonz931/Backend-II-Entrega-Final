@@ -1,0 +1,43 @@
+<div class="product-detail-container">
+
+    <div class="product-detail-card">
+
+        <h1>{{product.title}}</h1>
+
+        <p class="product-description">
+            {{product.description}}
+        </p>
+
+        <p class="product-price">
+            ${{product.price}}
+        </p>
+
+        <p class="product-meta">
+            Categoría: {{product.category}}
+        </p>
+
+        <p class="product-meta">
+            Stock: {{product.stock}}
+        </p>
+
+        <button class="add-button" onclick="addToCart('{{product._id}}')">
+            Agregar al carrito
+        </button>
+
+        <br><br>
+
+        <a class="back-link" href="/">
+            Volver a productos
+        </a>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="/css/styles.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+<script src="/js/cart.js"></script>
